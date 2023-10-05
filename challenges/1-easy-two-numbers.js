@@ -22,3 +22,41 @@ function bruteTwoNums(nums, target) {
 
 const bTwoNums = bruteTwoNums([15, 2, 11, 15, 1], 13)
 console.log(bTwoNums)
+
+/*
+The brute force method can be improved upon by introducing another data structure (hashmap) to improve the time complexity.
+*/
+
+function hashTwoNums(nums, target) {
+    const prevValues = {}
+    for (let i=0; i < nums.length; i++) {
+        const val = target - nums[i]
+        if (prevValues[val] !== undefined) {
+            return [prevValues[val], i]
+        } else {
+            prevValues[nums[i]] = i
+        } 
+    }
+}
+
+const hTwoNums = hashTwoNums([7, 10, 3, 15], 13)
+console.log(hTwoNums)
+
+/*
+This method uses the in operator but this variation is about 5ms slower then the hashTwoNums variation
+*/
+
+function hash2Nums(nums, target) {
+    const prevValues= {}
+    for (let i=0; i < nums.length; i++) {
+        const val = target - nums[i]
+        if (val in prevValues) {
+            return [prevValues[val], i]
+        } else {
+            prevValues[nums[i]] = i
+        } 
+    }
+}
+
+const h2TwoNums = hashTwoNums([7, 10, 3, 15], 13)
+console.log(h2TwoNums)
