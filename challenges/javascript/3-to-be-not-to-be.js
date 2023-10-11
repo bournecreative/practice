@@ -1,10 +1,12 @@
 var expect = function(val) {
 
+ 
     return {
-        toBe: (contrast) => val === contrast ? {"value": true} : {"value": "Not Equal"},
-        notToBe: (contrast) => val !== contrast ? {"value": true} : (Error("Equal"))
-
+        "toBe": (val2) => val === val2 ? true : Error("Not Equal"),
+        "notToBe": (val2) => val !== val2 ? true : Error("Equal")
+    
     }
+    
    
 };
 
