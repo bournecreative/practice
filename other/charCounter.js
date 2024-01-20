@@ -6,10 +6,9 @@ aabbccccc => a2b2c5
 */
 
 /*
-This is a simplier version of my initial solution using arrays. I still have this awful conditional logic determining
-when to count and terminate the counting based on if the current character matches the previous character.
+This is a simpler version of my initial solution using arrays. I still have this awful conditional logic determining when to count and terminate the counting based on if the current character matches the previous character.
 
-The improvement over my intial solution is that I am not using 2 arrays to maintain the end result and the current count of characters that match.
+The improvement over my initial solution is that I am not using 2 arrays to maintain the end result and the current count of characters that match.
 */
 
 function charCounter(str) {

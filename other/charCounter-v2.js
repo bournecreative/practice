@@ -5,8 +5,8 @@ aaabbaa => a3b2a2
 aabbccccc => a2b2c5
 */
 
-/*
-
+/* Approach 
+Approach version II. I still had to loop through the string and use a verbose conditional to manage the count of characters. This time I pushed the values into a hash map which made this outcome a little more intuitive to understand - just obtain the objects keys and return as a string combined.
 */
 
 function charCounter(str) {
