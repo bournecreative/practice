@@ -11,3 +11,10 @@ function fib(n) {
 
 const test = fib(3);
 console.log(test);
+
+const test1 = fib(0);
+console.log(test1);
+
+/* Although this algorithm is correct is not efficient because it is exponential
+T(n) = T(n-1) + T(n-2) + O(1)
+*/
